@@ -22,17 +22,19 @@
         </ul> -->
         <div>
             <p>Select topic ans message to subscribe.</p>
-            <p>/topic : <input type="text" id="topic_input" value="/chatter"></p>
-            <p>message/type : <input type="text" id="msg_input" value="std_msgs/String"></p>
+            <p>/topic : <input type="text" id="topic_input_sub" value="/chatter"></p>
+            <p>message/type : <input type="text" id="msg_input_sub" value="std_msgs/String"></p>
             
             <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
             
             
         </div>
-        <label class="toggle-switch">
-          <input type="checkbox" id="myToggle">
+        <!-- <label class="toggle-switch">
+          <input type="checkbox" id="myToggle-sub">
           <span class="slider"></span>
-      </label>
+        </label> -->
+        <button type="button" id="button-sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+
         <p> If it not working well , check the JavaScript console for the
           output or Shift+F5 to reload without Cache.</p>
         <div class="well" id="textArea"> </div>
@@ -43,7 +45,19 @@
         Simple publish Example (talker)
       </div>
       <div class="panel-body">
-        
+        <div>
+          <p>Select topic ans message to publish.</p>
+          <p>/topic : <input type="text" id="topic_input_pub" value="/chatter"></p>
+          <p>message/type : <input type="text" id="msg_input_pub" value="std_msgs/String"></p>
+          <p>data : <input type="text" id="data_pub" value= "Hello World"></p>
+
+          <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+          
+          
+      </div>
+      <button type="button" id="button-pub" class="btn btn-default" >Push this button to publish data</button>
+      <p> If it not working well , check the JavaScript console for the
+        output or Shift+F5 to reload without Cache.</p>
       </div>
     </div>
 </body>
@@ -55,6 +69,8 @@
 
 <script type="text/javascript" src="js/roswebsocket.js"></script>
 <script type="text/javascript" src="js/subscribe.js"></script>
+<script type="text/javascript" src="js/publish.js"></script>
+
 
 
 
