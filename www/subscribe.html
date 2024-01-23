@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/toggle_switch.css">
+
+</head>
+
+<body>
+  <h1></h1>
+  <div id="modal" class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Simple subscribe Example (listener)
+      </div>
+      <div class="panel-body">
+        <!-- <p>Run the following commands in the terminal.</p>
+        <ul>
+          <li><tt>rostopic pub -r 1 /chatter std_msgs/String "Hello,  World"</tt></li>
+        </ul> -->
+        <div>
+            <p>Select topic ans message to subscribe.</p>
+            <p>/topic : <input type="text" id="topic_input" value="/chatter"></p>
+            <p>message/type : <input type="text" id="msg_input" value="std_msgs/String"></p>
+            
+            <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+            
+            
+        </div>
+        <label class="toggle-switch">
+          <input type="checkbox" id="myToggle">
+          <span class="slider"></span>
+      </label>
+        <p> If it not working well , check the JavaScript console for the
+          output or Shift+F5 to reload without Cache.</p>
+        <div class="well" id="textArea"> </div>
+      </div>
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/eventemitter2.min.js"></script>
+<script src="js/roslib.min.js"></script>
+
+<script type="text/javascript" src="js/roswebsocket.js"></script>
+<script type="text/javascript" src="js/toggle_switch.js"></script>
+
+
+
+</html>
