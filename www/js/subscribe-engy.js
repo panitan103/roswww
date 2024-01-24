@@ -104,6 +104,28 @@ btn_robot_Depth_sub.addEventListener("click", function() {
     })
 });
 
+var btn_ahrs_sub = document.getElementById("btn_ahrs_sub");
+
+btn_ahrs_sub.addEventListener("click", function() {
+    var topic_ahrs_input_sub = document.getElementById("topic_ahrs_input_sub").value;
+    var msg_ahrs_input_sub = document.getElementById("msg_ahrs_input_sub").value;
+
+    var topic_ahrs_message_sub = new ROSLIB.Topic({
+        ros : ros,
+        name : topic_ahrs_input_sub,
+        messageType : msg_ahrs_input_sub
+        });
+
+
+        topic_ahrs_message_sub.subscribe(function(message) {
+    console.log('Received message on ' + topic_ahrs_message_sub.name + ': ' +  message.data);
+
+    var a = document.getElementById('textArea_ahrs');
+    a.textContent = new Date() + ' : Received message on ' + topic_ahrs_message_sub.name + ': ' + JSON.stringify(message);
+    })
+});
+
+
 var btn_dvl_data_sub = document.getElementById("btn_dvl_data_sub");
 
 btn_dvl_data_sub.addEventListener("click", function() {
