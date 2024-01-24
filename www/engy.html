@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/toggle_switch.css">
+  <link rel="stylesheet" href="css/engy.css">
+
+
+</head>
+
+<body>
+  <h1></h1>
+  <div id="modal" class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Simple subscribe Example (listener)
+      </div>
+      <div class="row panel-body">
+        <div class="column">
+          <div class="row">
+            <div>
+              <p>Select topic ans message to subscribe.</p>
+              <p>/topic : <input type="text" id="topic_input_sub" value="/chatter"></p>
+              <p>message/type : <input type="text" id="msg_input_sub" value="std_msgs/String"></p>
+              
+          </div>
+  
+          <button type="button" id="button-sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea"> </div>
+          </div>
+
+        </div>
+        <div class="column">
+          
+        </div>
+
+        
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Simple publish Example (talker)
+      </div>
+        
+        <div class="row panel-body">
+          
+          <div class="column">
+            <div class="row">
+              <div>
+                <label>Select GC_command topic and msg_GC_command message to publish.</label>
+                <p>/topic : <input type="text" id="topic_GC_command_input_pub" value="/GC_command"></p>
+                <p>message/type : <input type="text" id="msg_GC_command_input_pub" value="engy/msg_GC_command"></p>
+              </div>
+              <div>
+                <p>Depth_setpoint : <input type="text" id="data_GC_command_pub_Depth_setpoint" value= 1></p>
+                <p>lock_X : <input type="text" id="data_GC_command_pub_lock_X" value= 2></p>
+                <p>lock_Y : <input type="text" id="data_GC_command_pub_lock_Y" value= 3></p>
+              </div>
+              <div>
+                <p>linear_x : <input type="text" id="data_GC_command_pub_linear_x" value= 4></p>
+                <p>linear_y : <input type="text" id="data_GC_command_pub_linear_y" value= 5></p>
+                <p>linear_z : <input type="text" id="data_GC_command_pub_linear_z" value= 6></p>
+                <p>angular_z : <input type="text" id="data_GC_command_pub_angular_z" value= 7></p>
+              </div>
+              <div>
+                <p>vr_A : <input type="text" id="data_GC_command_pub_vr_A" value= 8></p>
+                <p>vr_B : <input type="text" id="data_GC_command_pub_vr_B" value= 9></p>
+                <p>sw_A : <input type="text" id="data_GC_command_pub_sw_A" value= 10></p>
+                <p>sw_B : <input type="text" id="data_GC_command_pub_sw_B" value= 11></p>
+                <p>sw_C : <input type="text" id="data_GC_command_pub_sw_C" value= 12></p>
+                <p>sw_D : <input type="text" id="data_GC_command_pub_sw_D" value= 13></p>
+      
+              </div>
+              
+
+
+              <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+              
+              <button type="button" id="GC_command_button_pub" class="btn btn-default" >Push this button to publish data</button>
+
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select voltage topic and msg_voltage message to publish.</label>
+                <p>/topic : <input type="text" id="topic_voltage_input_pub" value="/voltage"></p>
+                <p>message/type : <input type="text" id="msg_voltage_input_pub" value="engy/msg_voltage"></p>
+              </div>
+              <div>
+                <p>voltage : <input type="text" id="data_voltage_voltage" value= 1></p>
+                <p>water : <input type="text" id="data_voltage_water" value= 2></p>
+                <p>current : <input type="text" id="data_voltage_current" value= 3></p>
+              </div>
+              
+              
+
+
+              <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+              
+              <button type="button" id="voltage_button_pub" class="btn btn-default" >Push this button to publish data</button>
+
+            </div>
+            <div class="row">
+              <div>
+                <label>Select Target_point topic and Twist message to publish.</label>
+                <p>/topic : <input type="text" id="topic_Target_point_input_pub" value="/Target_point"></p>
+                <p>message/type : <input type="text" id="msg_Target_point_input_pub" value="geometry_msgs/Twist"></p>
+              </div>
+              <div>
+                <p>linear_x : <input type="text" id="data_Target_linear_x" value= 1></p>
+                <p>linear_y : <input type="text" id="data_Target_linear_y" value= 2></p>
+                <p>angular_z : <input type="text" id="data_Target_angular_z" value= 3></p>
+                
+              </div>
+              
+              
+
+
+              <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+              
+              <button type="button" id="Target_point_button_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select nav_command topic and Int16 message to publish.</label>
+                <p>/topic : <input type="text" id="topic_nav_command_input_pub" value="/nav_command"></p>
+                <p>message/type : <input type="text" id="msg_nav_command_input_pub" value="std_msgs/Int16"></p>
+              </div>
+              <div>
+                <p>data : <input type="text" id="data_nav_command" value= 1></p> 
+              </div>
+              
+              
+
+
+              <!-- <button onclick="rosWebsocketClient()">Submit</button> -->
+              
+              <button type="button" id="nav_command_button_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select robot_Depth topic and Int16 message to publish.</label>
+                <p>/topic : <input type="text" id="topic_robot_Depth_input_pub" value="/robot_Depth"></p>
+                <p>message/type : <input type="text" id="msg_robot_Depth_input_pub" value="std_msgs/Int16"></p>
+              </div>
+              <div>
+                <p>data : <input type="text" id="data_robot_Depth" value= 1></p> 
+              </div>
+
+              <button type="button" id="robot_Depth_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            
+          </div>
+          <div class="column">
+            
+            
+            
+            <div class="row">
+              <div>
+                <label>Select ahrs topic and Point32 message to publish.</label>
+                <p>/topic : <input type="text" id="topic_ahrs_input_pub" value="/ahrs"></p>
+                <p>message/type : <input type="text" id="msg_ahrs_input_pub" value="geometry_msgs/Point32"></p>
+              </div>
+              <div>
+                <p>ahrs_x : <input type="text" id="data_ahrs_x" value= 1.0></p> 
+                <p>ahrs_y : <input type="text" id="data_ahrs_y" value= 2.0></p> 
+                <p>ahrs_z : <input type="text" id="data_ahrs_z" value= 3.0></p> 
+              </div>
+
+              <button type="button" id="ahrs_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select dvl/data topic and DVL message to publish.</label>
+                <p>/topic : <input type="text" id="topic_dvl_data_input_pub" value="/dvl/data"></p>
+                <p>message/type : <input type="text" id="msg_dvl_data_input_pub" value="dvl/DVL"></p>
+              </div>
+              <div>
+                <p>velocity_x : <input type="text" id="dvl_data_velocity_x" value= 1.0></p> 
+                <p>velocity_y : <input type="text" id="dvl_data_velocity_y" value= 2.0></p> 
+                <p>velocity_z : <input type="text" id="dvl_data_velocity_z" value= 3.0></p> 
+
+
+
+
+              </div>
+
+              <button type="button" id="dvl_data_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select dvl/dead_reckoging topic and DVL message to publish.</label>
+                <p>/topic : <input type="text" id="topic_dvl_dead_reckoging_data_input_pub" value="/dvl/dead_reckoging"></p>
+                <p>message/type : <input type="text" id="msg_dvl_dead_reckoging_data_input_pub" value="dvl/DVLDeadReckoning"></p>
+              </div>
+              <div>
+                <p>position_x : <input type="text" id="dvl_dead_reckoging_data_position_x" value= 1.0></p> 
+                <p>position_y : <input type="text" id="dvl_dead_reckoging_data_position_y" value= 2.0></p> 
+                <p>position_z : <input type="text" id="dvl_dead_reckoging_data_position_z" value= 3.0></p> 
+
+                <p>orientation_x : <input type="text" id="dvl_dead_reckoging_data_orientation_x" value= 1.0></p> 
+                <p>orientation_y : <input type="text" id="dvl_dead_reckoging_data_orientation_y" value= 2.0></p> 
+                <p>orientation_z : <input type="text" id="dvl_dead_reckoging_data_orientation_z" value= 3.0></p>
+
+
+              </div>
+
+              <button type="button" id="dvl_dead_reckoging_data_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select TaskStatus topic and Int16 message to publish.</label>
+                <p>/topic : <input type="text" id="topic_TaskStatus_input_pub" value="/TaskStatus"></p>
+                <p>message/type : <input type="text" id="msg_TaskStatus_input_pub" value="std_msgs/Int16"></p>
+              </div>
+              <div>
+                <p>data : <input type="text" id="data_TaskStatus" value= 1></p> 
+              </div>
+
+              <button type="button" id="TaskStatus_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            <div class="row">
+              <div>
+                <label>Select Xsens topic and orientationEstimate message to publish.</label>
+                <p>/topic : <input type="text" id="topic_Xsens_input_pub" value="/mti/filter/orientation"></p>
+                <p>message/type : <input type="text" id="msg_Xsens_input_pub" value="xsens_msgs/orientationEstimate"></p>
+              </div>
+              <div>
+                <p>orientation_roll : <input type="text" id="Xsens_data_orientation_roll" value= 1.0></p> 
+                <p>orientation_pitch : <input type="text" id="Xsens_data_orientation_pitch" value= 2.0></p> 
+                <p>orientation_yaw : <input type="text" id="Xsens_data_orientation_yaw" value= 3.0></p>
+
+
+              </div>
+
+              <button type="button" id="Xsens_data_pub" class="btn btn-default" >Push this button to publish data</button>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        
+      
+    </div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/eventemitter2.min.js"></script>
+<script src="js/roslib.min.js"></script>
+
+<script type="text/javascript" src="js/roswebsocket.js"></script>
+<script type="text/javascript" src="js/subscribe-engy.js"></script>
+<script type="text/javascript" src="js/publish-engy.js"></script>
+
+
+
+
+</html>
