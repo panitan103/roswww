@@ -21,22 +21,152 @@
         <div class="column">
           <div class="row">
             <div>
-              <p>Select topic ans message to subscribe.</p>
-              <p>/topic : <input type="text" id="topic_input_sub" value="/chatter"></p>
-              <p>message/type : <input type="text" id="msg_input_sub" value="std_msgs/String"></p>
+              <label>Select GC_command topic and msg_GC_command message to subscribe.</label>
+                <p>/topic : <input type="text" id="topic_GC_command_input_sub" value="/GC_command"></p>
+                <p>message/type : <input type="text" id="msg_GC_command_input_sub" value="engy/msg_GC_command"></p>
               
           </div>
   
-          <button type="button" id="button-sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+          <button type="button" id="btn_GC_command_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
   
           <p> If it not working well , check the JavaScript console for the
             output or Shift+F5 to reload without Cache.</p>
-          <div class="well" id="textArea"> </div>
+          <div class="well" id="textArea_GC_command"> </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label>Select voltage topic and msg_voltage message to subscribe.</label>
+                <p>/topic : <input type="text" id="topic_voltage_input_sub" value="/voltage"></p>
+                <p>message/type : <input type="text" id="msg_voltage_input_sub" value="engy/msg_voltage"></p>
+              
+          </div>
+  
+          <button type="button" id="btn_voltage_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_voltage"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select Target_point topic and Twist message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_Target_point_input_sub" value="/Target_point"></p>
+              <p>message/type : <input type="text" id="msg_Target_point_input_sub" value="geometry_msgs/Twist"></p>
+
+              
+          </div>
+  
+          <button type="button" id="btn_Target_point_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_Target_point"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select nav_command topic and Int16 message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_nav_command_input_sub" value="/nav_command"></p>
+              <p>message/type : <input type="text" id="msg_nav_command_input_sub" value="std_msgs/Int16"></p>
+              
+          </div>
+  
+          <button type="button" id="btn_nav_command_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_nav_command"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select robot_Depth topic and Int16 message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_robot_Depth_input_sub" value="/robot_Depth"></p>
+              <p>message/type : <input type="text" id="msg_robot_Depth_input_sub" value="std_msgs/Int16"></p>
+              
+          </div>
+  
+          <button type="button" id="btn_robot_Depth_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_robot_Depth"> </div>
           </div>
 
         </div>
         <div class="column">
-          
+          <div class="row">
+            <div>
+              <label>Select ahrs topic and Point32 message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_ahrs_input_sub" value="/ahrs"></p>
+              <p>message/type : <input type="text" id="msg_ahrs_input_sub" value="geometry_msgs/Point32"></p>
+              
+          </div>
+  
+          <button type="button" id="btn_ahrs_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_ahrs"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select dvl/data topic and DVL message to subscribe.</label>
+                <p>/topic : <input type="text" id="topic_dvl_data_input_sub" value="/dvl/data"></p>
+                <p>message/type : <input type="text" id="msg_dvl_data_input_sub" value="dvl/DVL"></p>
+              
+          </div>
+  
+          <button type="button" id="btn_dvl_data_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_dvl_data"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select dvl/dead_reckoging topic and DVL message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_dvl_dead_reckoging_data_input_sub" value="/dvl/dead_reckoging"></p>
+              <p>message/type : <input type="text" id="msg_dvl_dead_reckoging_data_input_sub" value="dvl/DVLDeadReckoning"></p>
+
+              
+          </div>
+  
+          <button type="button" id="btn_dvl_dead_reckoging_data_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_dvl_dead_reckoging_data"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select TaskStatus topic and Int16 message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_TaskStatus_input_sub" value="/TaskStatus"></p>
+              <p>message/type : <input type="text" id="msg_TaskStatus_input_sub" value="std_msgs/Int16"></p>
+
+              
+          </div>
+  
+          <button type="button" id="btn_TaskStatus_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_TaskStatus"> </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Select Xsens topic and orientationEstimate message to subscribe.</label>
+              <p>/topic : <input type="text" id="topic_Xsens_input_sub" value="/mti/filter/orientation"></p>
+              <p>message/type : <input type="text" id="msg_Xsens_input_sub" value="xsens_msgs/orientationEstimate"></p>
+
+              
+          </div>
+  
+          <button type="button" id="btn_Xsens_sub" class="btn btn-default" >Push this button to set subscribe topic and message.</button>
+  
+          <p> If it not working well , check the JavaScript console for the
+            output or Shift+F5 to reload without Cache.</p>
+          <div class="well" id="textArea_Xsens"> </div>
+          </div>
         </div>
 
         
