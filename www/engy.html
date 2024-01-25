@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RC Plane Controller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #controller {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="controller">
+  <h2>RC Plane Controller</h2>
+  <label for="throttle">Throttle:</label>
+  <input type="range" id="throttle" min="0" max="100" value="50">
+
+  <label for="pitch">Pitch:</label>
+  <input type="range" id="pitch" min="-50" max="50" value="0">
+
+  <label for="yaw">Yaw:</label>
+  <input type="range" id="yaw" min="-50" max="50" value="0">
+
+  <button onclick="sendControls()">Send Controls</button>
+</div>
+
+<script>
+  function sendControls() {
+    // Fetch values from sliders
+    const throttleValue = document.getElementById('throttle').value;
+    const pitchValue = document.getElementById('pitch').value;
+    const yawValue = document.getElementById('yaw').value;
+
+    // Perform actions with the control values (replace with actual actions)
+    console.log('Throttle:', throttleValue);
+    console.log('Pitch:', pitchValue);
+    console.log('Yaw:', yawValue);
+
+    // You may want to send these values to a server for further processing or communicate with the RC plane.
+    // You can use AJAX, WebSockets, or other communication methods for this purpose.
+  }
+</script>
+
+</body>
+</html>
