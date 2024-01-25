@@ -45,28 +45,24 @@ GC_command_button_pub.addEventListener("click", function() {
         messageType : msg_GC_command_input_pub,
         });
 
-    var msg_twist_package = new ROSLIB.Message({
-        linear_x: data_GC_command_pub_linear_x,
-        linear_y: data_GC_command_pub_linear_y,
-        linear_z: data_GC_command_pub_linear_z,
-        angular_z: data_GC_command_pub_angular_z,
-
-        });
-    var msg_RC_sw = new ROSLIB.Message({
-        vr_A: data_GC_command_pub_vr_A,
-        vr_B: data_GC_command_pub_vr_B,
-        sw_A: data_GC_command_pub_sw_A,
-        sw_B: data_GC_command_pub_sw_B,
-        sw_C: data_GC_command_pub_sw_C,
-        sw_D: data_GC_command_pub_sw_D
-
-        });
     var GC_command = new ROSLIB.Message({
         Depth_setpoint: data_GC_command_pub_Depth_setpoint,
         lock_X: data_GC_command_pub_lock_X,
         lock_Y: data_GC_command_pub_lock_Y,
-        engy_twist:msg_twist_package,
-        rc_sw:msg_RC_sw
+        engy_twist:{
+            linear_x: data_GC_command_pub_linear_x,
+            linear_y: data_GC_command_pub_linear_y,
+            linear_z: data_GC_command_pub_linear_z,
+            angular_z: data_GC_command_pub_angular_z,
+        },
+        rc_sw:{
+            vr_A: data_GC_command_pub_vr_A,
+            vr_B: data_GC_command_pub_vr_B,
+            sw_A: data_GC_command_pub_sw_A,
+            sw_B: data_GC_command_pub_sw_B,
+            sw_C: data_GC_command_pub_sw_C,
+            sw_D: data_GC_command_pub_sw_D
+        }
 
 
 
@@ -271,13 +267,12 @@ dvl_data_pub.addEventListener("click", function() {
         messageType : msg_dvl_data_input_pub,
         });
                 
-    var dvl_data_velocity = new ROSLIB.Message({
-        x: dvl_data_velocity_x,
-        y: dvl_data_velocity_y,
-        z: dvl_data_velocity_z,
-        });
     var dvl_data = new ROSLIB.Message({
-        velocity: dvl_data_velocity,
+        velocity: {
+            x: dvl_data_velocity_x,
+            y: dvl_data_velocity_y,
+            z: dvl_data_velocity_z,
+        },
 
         });
                 
@@ -316,20 +311,18 @@ dvl_dead_reckoging_data_pub.addEventListener("click", function() {
         name : topic_dvl_dead_reckoging_data_input_pub,
         messageType : msg_dvl_dead_reckoging_data_input_pub,
         });
-                
-    var dvl_dead_reckoging_position_data = new ROSLIB.Message({
-        x: dvl_dead_reckoging_data_position_x,
-        y: dvl_dead_reckoging_data_position_y,
-        z: dvl_dead_reckoging_data_position_z,
-        });
-    var dvl_dead_reckoging_orientation_data = new ROSLIB.Message({
-        x: dvl_dead_reckoging_data_orientation_x,
-        y: dvl_dead_reckoging_data_orientation_y,
-        z: dvl_dead_reckoging_data_orientation_z,
-        });
+            
     var dvl_dead_reckoging_data = new ROSLIB.Message({
-        position: dvl_dead_reckoging_position_data,
-        orientation: dvl_dead_reckoging_orientation_data,
+        position: {
+            x: dvl_dead_reckoging_data_position_x,
+            y: dvl_dead_reckoging_data_position_y,
+            z: dvl_dead_reckoging_data_position_z,
+        },
+        orientation: {
+            x: dvl_dead_reckoging_data_orientation_x,
+            y: dvl_dead_reckoging_data_orientation_y,
+            z: dvl_dead_reckoging_data_orientation_z,
+        },
 
         });
                 
