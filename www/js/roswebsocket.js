@@ -10,7 +10,7 @@ toggleSwitch.addEventListener("change", function() {
 
         console.log("Connectiong to ROS websocket")
         ros = new ROSLIB.Ros({
-            url : 'ws://' + websocket_ip
+            url : websocket_ip
         });
         
         
